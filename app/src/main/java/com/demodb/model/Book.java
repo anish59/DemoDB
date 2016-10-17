@@ -18,6 +18,7 @@ import java.util.List;
 @AutoValue
 public abstract class Book implements BookModel {
     public static final Factory<Book> FACTORY = new Factory<>(AutoValue_Book::new);
+
     public static final RowMapper<Book> ALL_BOOK_MAPPER = FACTORY.select_all_booksMapper();
   //  public static final RowMapper<Se> SELECT_CASE_NOTES_MAPPER =
           //TODO_NOTE_FACTORY.select_all_case_NotesMapper(AutoValue_TodoNote_AllCaseNotes::new, Case.CASE_FACTORY);
