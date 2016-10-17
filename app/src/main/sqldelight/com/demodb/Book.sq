@@ -1,6 +1,6 @@
 CREATE TABLE book_details
 (
- book_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+ book_id INTEGER NOT NULL PRIMARY KEY,
  book_name TEXT NOT NULL,
  book_price INTEGER NOT NULL
 );
@@ -12,5 +12,5 @@ select_all_books_byname:
 SELECT book_name, book_id FROM book_details where book_price=?;
 
 select_all_books_by_price:
-select * from book_details group by book_price;
+select * from book_details order by book_price;
 
